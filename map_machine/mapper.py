@@ -347,7 +347,7 @@ def render_map(arguments: argparse.Namespace) -> None:
         workspace.ICONS_PATH, workspace.ICONS_CONFIG_PATH
     )
 
-    scheme: Scheme = Scheme.from_file(workspace.DEFAULT_SCHEME_PATH)
+    scheme: Scheme = Scheme.from_file(Path(arguments.scheme))
     constructor: Constructor = Constructor(
         osm_data=osm_data,
         flinger=flinger,

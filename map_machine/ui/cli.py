@@ -326,6 +326,13 @@ def add_render_arguments(parser: argparse.ArgumentParser) -> None:
         metavar="<width>,<height>",
         help="resulted image size",
     )
+    parser.add_argument(
+        "-S",
+        "--scheme",
+        metavar="<filepath to scheme>",
+        help="Path to scheme declaration",
+        default="map_machine/scheme/default.yml",
+    )
 
 
 def add_mapcss_arguments(parser: argparse.ArgumentParser) -> None:
